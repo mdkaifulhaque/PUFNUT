@@ -1,0 +1,125 @@
+body.auth-page {
+  background: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: #fff;
+  color: #111;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.auth-container a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ========== Navbar user & profile modal (for auth.css) ========== */
+
+/* Navbar profile box */
+.user-box { display:flex; align-items:center; gap:10px; cursor:pointer; }
+.user-nav-img { width:36px; height:36px; border-radius:50%; object-fit:cover; background:#fff; }
+.user-name { font-weight:700; color:#fff; }
+
+/* Logout button styling */
+.logout-btn { padding:6px 12px; border:none; background:#fff; color:#000; border-radius:8px; font-weight:700; cursor:pointer; }
+
+/* Profile modal overlay */
+.profile-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  background: rgba(0,0,0,0.45);
+}
+.profile-modal.hidden { display: none; }
+
+/* Modal inner card */
+.profile-modal-inner {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.profile-modal-inner h3 { margin-top: 0; }
+
+/* Close button */
+.profile-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* form fields */
+.profile-fields label { display:block; margin-top:12px; font-weight:600; color:#333; }
+.profile-fields input {
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  box-sizing:border-box;
+}
+
+/* image preview */
+.img-preview-row { margin-top:8px; display:flex; justify-content:center; }
+.img-preview-row img {
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* actions */
+.profile-actions { display:flex; gap:10px; margin-top:14px; justify-content:center; }
+.admin-btn { background:#000; color:#fff; border:none; padding:10px 12px; border-radius:8px; cursor:pointer; font-weight:700; }
+.admin-cancel { background:#eee; color:#111; }
+
+/* small responsive tweaks */
+@media (max-width:520px) {
+  .profile-modal-inner { padding:16px; margin:12px; }
+  .user-name { display:none; } /* save navbar space on tiny screens */
+}

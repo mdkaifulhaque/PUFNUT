@@ -1,0 +1,477 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    background: #0c0c0c;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.px-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: #a1bcff; /* Match index.html background */
+}
+
+.px-hero-bg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    filter: brightness(38%);
+    transform: scale(1.15);
+}
+
+/* Floating hero image */
+.hero-floating-img {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    width: 420px;
+    opacity: 0;
+    transform: translateY(50px);
+    border-radius: 14px;
+}
+
+/* Hero text */
+.px-title {
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.px-sub {
+    font-size: 1.8rem;
+    opacity: 0;
+    margin-top: 15px;
+    transform: translateY(25px);
+}
+
+.px-paragraphs p {
+    font-size: 1.4rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* IMAGE STRIP SECTION */
+.px-images-section {
+    margin-top: 100px;
+}
+
+.wide-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.1);
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+/* VALUES HEADER */
+.values-header {
+    padding: 100px 0 20px;
+    background-color: #0c0c0c;
+    position: relative;
+}
+
+.values-title {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+    color: white;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    font-family: gilroy;
+}
+
+.values-title::before {
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 5%;
+    color: #a1bcff;
+}
+
+.values-subtitle {
+    margin-left: 28vw;
+    font-size: 1.5rem;
+    color: #a0a0a0;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 600px;
+}
+
+/* ===== NEW PERFECTLY CENTERED SCROLL TEXT SECTION ===== */
+
+.scroll-lines {
+    padding: 50px 0 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.scroll-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-item {
+    font-size: 3rem;
+    font-weight: 800;
+    opacity: 0.12;
+    margin: 15px 0;
+    line-height: 1;
+    white-space: nowrap;
+    transition: 0.5s ease-out;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.scroll-item.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .px-title { font-size: 4rem; }
+    .px-sub { font-size: 1.2rem; }
+    .px-paragraphs p { font-size: 1.1rem; }
+    .scroll-item { font-size: 2rem; }
+}
+
+/* PROCESS TIMELINE */
+.process-section {
+    padding: 100px 0;
+    background-color: #0c0c0c;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-title {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+    color: white;
+    margin-bottom: 80px;
+    font-family: gilroy;
+}
+
+.process-title::before {
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 5%;
+    color: #a1bcff;
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* The vertical line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+}
+
+/* The moving line (animated via JS) */
+.timeline-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; /* Will be animated to 100% */
+    background: #a1bcff; /* Brand color */
+    transition: height 0.1s linear;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    position: relative;
+    opacity: 0; /* Hidden initially for animation */
+    transform: translateY(50px);
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: #a1bcff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(161, 188, 255, 0.2);
+}
+
+.timeline-content {
+    width: 40%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    font-family: "Gilroy", sans-serif;
+}
+
+.timeline-content h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.timeline-content p {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* AVAILABILITY SECTION */
+.availability-section {
+    padding-top: 100px;
+    background-color: #0c0c0c;
+}
+
+.availability-title {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+    color: white;
+    margin-bottom: 80px;
+    font-family: gilroy;
+}
+
+.availability-title::before {
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 5%;
+    color: #a1bcff;
+}
+
+/* AVAILABILITY MARQUEE */
+.availability-marquee {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #a1bcff;
+    color: #0c0c0c;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.marquee-content h1 {
+    font-size: 7vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    transform: translateX(0); 
+    padding-right: 50px; /* Add some spacing at the end */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .px-hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 120px;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+
+    .px-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+
+    .px-sub {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .px-paragraphs {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .px-paragraphs p {
+        font-size: 1.1rem;
+    }
+
+    /* Floating Image - Keep it but make it smaller and position it safely */
+    .hero-floating-img {
+        display: block;
+        width: 180px;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 40px;
+        transform: none !important; /* Override GSAP if needed or just let it animate */
+        opacity: 1 !important; /* Ensure visibility if animation fails */
+    }
+
+    /* Section Titles - Consistent Layout for 01, 02, 03 */
+    .values-title, 
+    .process-title, 
+    .availability-title {
+        margin-left: 20vw; /* Indent text to make room for number */
+        font-size: 9vw; /* Responsive size */
+        margin-bottom: 40px;
+        line-height: 1.1;
+        position: relative; /* Ensure pseudo-element positioning works */
+    }
+
+    .values-title::before, 
+    .process-title::before, 
+    .availability-title::before {
+        left: -15vw; /* Position number to the left of text */
+        top: 2px; /* Align with top of text */
+        font-size: 4.5vw; /* Proportional size for the number */
+        font-family: "silk serif";
+        font-weight: 100;
+        color: #a1bcff;
+    }
+
+    .values-subtitle {
+        margin-left: 20vw; /* Align with title */
+        padding-right: 20px;
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    /* Scroll Text */
+    .scroll-item {
+        font-size: 1.8rem;
+        white-space: normal;
+        padding: 0 10px;
+    }
+
+    /* Timeline - Stack for readability but keep style */
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        margin-left: 50px;
+        padding-right: 20px;
+        margin-bottom: 50px;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        text-align: left !important;
+        margin: 0 !important;
+        padding: 20px;
+    }
+
+    .step-number {
+        font-size: 2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Marquee */
+    .marquee-content h1 {
+        font-size: 3rem;
+        padding-right: 30px;
+    }
+}

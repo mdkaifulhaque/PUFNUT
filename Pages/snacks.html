@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PUFNUT - Snacks</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Use landing CSS for navbar/footer styling (landing page's style.css) -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Remix Icon CDN (icons used in footer/navbar) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/auth.css">
+
+  <!-- Page specific styles -->
+  <link rel="stylesheet" href="../css/snacks.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="snacks-page">
+
+  <aside>
+      <h3>Menu.</h3>
+      <nav>
+          <ul>
+              <li><div class="mask"><a href="../index.html">Home</a></div></li>
+              <li><div class="mask"><a href="snacks.html">Shop</a></div></li>
+              <li><div class="mask"><a href="about.html">About Us</a></div></li>
+              <li><div class="mask"><a href="cart.html">Cart</a></div></li>
+              <li><div class="mask"><a href="login.html">Login</a></div></li>
+          </ul>
+      </nav>
+  </aside>
+
+  <!-- NAVBAR (copied/kept same structure as your landing index.html nav) -->
+  <div id="nav" style="background-color: #a1bcff;">
+    <h3 class="logo">PufNut</h3>
+
+    <div id="nav-part2">
+      <a href="../index.html"><h3>Home</h3></a>
+      <a href="recipe.html"><h3>Recipe</h3></a>
+                  <a href="about.html"><h3>About Us</h3></a>
+    </div>
+
+    <div id="nav-part3">
+      <a href="cart.html"><h3>Cart</h3></a>
+      <a href="login.html"><h3>Login</h3></a>
+    </div>
+
+    <a href="#" class="menu-toggle">
+        <svg class="open-menu" viewBox="0 0 50 50" fill="none">
+            <path d="M12.5003 14.5833H22.917C23.4695 14.5833 23.9994 14.8028 24.3901 15.1935C24.7808 15.5842 25.0003 16.1141 25.0003 16.6667C25.0003 17.2192 24.7808 17.7491 24.3901 18.1398C23.9994 18.5305 23.4695 18.75 22.917 18.75H12.5003C11.9478 18.75 11.4179 18.5305 11.0272 18.1398C10.6365 17.7491 10.417 17.2192 10.417 16.6667C10.417 16.1141 10.6365 15.5842 11.0272 15.1935C11.4179 14.8028 11.9478 14.5833 12.5003 14.5833ZM27.0837 31.25H37.5003C38.0529 31.25 38.5828 31.4695 38.9735 31.8602C39.3642 32.2509 39.5837 32.7808 39.5837 33.3333C39.5837 33.8859 39.3642 34.4158 38.9735 34.8065C38.5828 35.1972 38.0529 35.4167 37.5003 35.4167H27.0837C26.5311 35.4167 26.0012 35.1972 25.6105 34.8065C25.2198 34.4158 25.0003 33.8859 25.0003 33.3333C25.0003 32.7808 25.2198 32.2509 25.6105 31.8602C26.0012 31.4695 26.5311 31.25 27.0837 31.25ZM12.5003 22.9167H37.5003C38.0529 22.9167 38.5828 23.1362 38.9735 23.5269C39.3642 23.9176 39.5837 24.4475 39.5837 25C39.5837 25.5525 39.3642 26.0824 38.9735 26.4731C38.5828 26.8639 38.0529 27.0833 37.5003 27.0833H12.5003C11.9478 27.0833 11.4179 26.8639 11.0272 26.4731C10.6365 26.0824 10.417 25.5525 10.417 25C10.417 24.4475 10.6365 23.9176 11.0272 23.5269C11.4179 23.1362 11.9478 22.9167 12.5003 22.9167Z" fill="black"/>
+        </svg>
+    </a>
+  </div>
+
+  <!-- HERO / Title -->
+  <header class="page-hero">
+    <h1 class="page-title">Our Snacks</h1>
+    <p class="page-sub">Premium flavored makhana — crunchy, healthy, and made in Bihar.</p>
+  </header>
+
+  <!-- PRODUCTS GRID -->
+  <main>
+    <section class="products-section">
+      <div class="product-container" id="snackList" aria-live="polite">
+        <!-- cards inserted by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (copied exactly from index.html) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="footer-logo">PufNut</h3>
+        <p>Bihar's finest makhana, bringing traditional taste with modern flavors to your doorstep.</p>
+        <div class="social-links">
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-youtube-fill"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="../index.html">Home</a>
+        <a href="snacks.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="cart.html">Cart</a>
+      </div>
+      <div class="footer-section">
+        <h4>Flavors</h4>
+        <a href="snacks.html">Classic Roasted</a>
+        <a href="snacks.html">Peri-Peri</a>
+        <a href="snacks.html">Cheese & Herbs</a>
+        <a href="snacks.html">Pudina Punch</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p><i class="ri-mail-line"></i> hello@pufnut.com</p>
+        <p><i class="ri-phone-line"></i> +91 98765 43210</p>
+        <p><i class="ri-map-pin-line"></i> Patna, Bihar, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 PufNut. All rights reserved. Made with love in Bihar.</p>
+    </div>
+  </footer>
+
+  <!-- Product data + page script -->
+  <script src="../Js/product.js"></script>
+  <script src="../Js/snacks.js"></script>
+  <script src="../Js/auth.js"></script>
+  <script src="../Js/user-navbar.js"></script>
+  <script src="../Js/user-profile.js"></script>
+  <script src="../Js/responsive-menu.js"></script>
+</body>
+</html>

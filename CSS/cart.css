@@ -1,0 +1,146 @@
+/* CART PAGE SAME THEME (white card) */
+
+body.cart-page {
+  background: #0c0c0c;
+  color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* header */
+.cart-header {
+  text-align: center;
+  padding: 40px 10px 20px;
+}
+.cart-header h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* CART WRAPPER */
+.cart-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CART ITEM */
+.cart-item {
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* image */
+.cart-item-img {
+  width: 120px;
+  height: 120px;
+  background: #f3f3f3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* content */
+.cart-item-content {
+  flex: 1;
+}
+
+/* title */
+.cart-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* PRICE */
+.cart-item-price {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+/* QTY BUTTONS */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.qty-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+.qty-num {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* REMOVE */
+.remove-btn {
+  background: #ff3b3b;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* CART SUMMARY */
+.cart-summary-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.cart-summary {
+  background: #fff;
+  color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.cart-summary h2 {
+  margin: 0 0 14px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUFNET</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <!-- locomotive css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- shery css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css"
+    />
+    <!-- remixicon cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- css file  -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/auth.css">
+
+  </head>
+  <body>
+    <div id="loader">
+      <h1>PUFNUT</h1>
+      <div class="progress"></div>
+    </div>
+
+    <aside>
+        <h3>Menu.</h3>
+        <nav>
+            <ul>
+                <li><div class="mask"><a href="index.html">Home</a></div></li>
+                <li><div class="mask"><a href="Pages/snacks.html">Shop</a></div></li>
+                <li><div class="mask"><a href="Pages/about.html">About Us</a></div></li>
+                <li><div class="mask"><a href="Pages/cart.html">Cart</a></div></li>
+                <li><div class="mask"><a href="Pages/login.html">Login</a></div></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="main">
+      <div id="page1">
+        <div id="nav">
+          <h3 class="logo">PufNut</h3>
+          <div id="nav-part2">
+            <a href="index.html"><h3>Home</h3></a>
+            <a href="Pages/snacks.html"><h3>Shop</h3></a>
+                            <a href="Pages/about.html"><h3>About Us</h3></a>
+          </div>
+
+        <div id="nav-part3">
+       <a href="Pages/cart.html"><h3>Cart</h3></a>
+      <a href="Pages/login.html"><h3>Login</h3></a>
+
+    </div>
+
+          <a href="#" class="menu-toggle">
+            <svg class="open-menu" viewBox="0 0 50 50" fill="none">
+                <path d="M12.5003 14.5833H22.917C23.4695 14.5833 23.9994 14.8028 24.3901 15.1935C24.7808 15.5842 25.0003 16.1141 25.0003 16.6667C25.0003 17.2192 24.7808 17.7491 24.3901 18.1398C23.9994 18.5305 23.4695 18.75 22.917 18.75H12.5003C11.9478 18.75 11.4179 18.5305 11.0272 18.1398C10.6365 17.7491 10.417 17.2192 10.417 16.6667C10.417 16.1141 10.6365 15.5842 11.0272 15.1935C11.4179 14.8028 11.9478 14.5833 12.5003 14.5833ZM27.0837 31.25H37.5003C38.0529 31.25 38.5828 31.4695 38.9735 31.8602C39.3642 32.2509 39.5837 32.7808 39.5837 33.3333C39.5837 33.8859 39.3642 34.4158 38.9735 34.8065C38.5828 35.1972 38.0529 35.4167 37.5003 35.4167H27.0837C26.5311 35.4167 26.0012 35.1972 25.6105 34.8065C25.2198 34.4158 25.0003 33.8859 25.0003 33.3333C25.0003 32.7808 25.2198 32.2509 25.6105 31.8602C26.0012 31.4695 26.5311 31.25 27.0837 31.25ZM12.5003 22.9167H37.5003C38.0529 22.9167 38.5828 23.1362 38.9735 23.5269C39.3642 23.9176 39.5837 24.4475 39.5837 25C39.5837 25.5525 39.3642 26.0824 38.9735 26.4731C38.5828 26.8639 38.0529 27.0833 37.5003 27.0833H12.5003C11.9478 27.0833 11.4179 26.8639 11.0272 26.4731C10.6365 26.0824 10.417 25.5525 10.417 25C10.417 24.4475 10.6365 23.9176 11.0272 23.5269C11.4179 23.1362 11.9478 22.9167 12.5003 22.9167Z" fill="black"/>
+            </svg>
+          </a>
+        </div>
+
+        <h1>Healthy.</h1>
+        <h1>Crunchy.</h1>
+        <h1>PufNut.</h1>
+
+        <div class="button">
+          <div class="hireUs capsule">
+            <div class="circle"></div>
+            <div class="fullWidth"></div>
+            <h6><a href="Pages/snacks.html">Shop Snacks 🛍️</a></h6>
+          </div>
+
+          <div class="emailUs capsule">
+            <div class="fullWidth"></div>
+            <div class="circle"></div>
+
+            <h6><a href="Pages/recipe.html">View Recipes 👨‍🍳</a></h6>
+          </div>
+        </div>
+        <img
+          id="img1"
+          src="./Asset/111.png"
+          alt=""
+        />
+
+        <img
+          id="img2"
+          src="./Asset/222.png"
+          alt=""
+        />
+
+        <img
+          id="img3"
+          src="./Asset/333.png"
+          alt=""
+        />
+      </div>
+
+      <div id="page2" data-scroll data-scroll-speed="-.5">
+        <h1>How it's made</h1>
+
+        <div id="video-container">
+          <div id="video-cursor">
+            <i class="ri-play-mini-fill"></i>
+          </div>
+          <video
+            loop
+            src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"
+          ></video>
+        </div>
+      </div>
+
+      <div id="page3" data-scroll data-scroll-speed="-2.5">
+        <h1>OUR PRODUCTS</h1>
+        <div id="image-div-container">
+          <a href="Pages/snacks.html" class="image-div-link">
+            <div class="image-div">
+              <img
+                src="./Asset/111.png"
+                alt=""
+              />
+              <img
+                src="./Asset/222.png"
+                alt=""
+              />
+            </div>
+          </a>
+          <a href="Pages/recipe.html" class="image-div-link">
+            <div class="image-div">
+              <img
+                src="./Asset/333.png"
+                alt=""
+              />
+              <img
+                src="./Asset/4444.png"
+                alt=""
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="review">
+        <h1>PUFNUT VOICE</h1>
+
+      </div>
+      <div id="page4">
+        <section class="Content">
+      <div class="Content__inner">
+        <div class="Content__wrapper">
+          <div class="Content__slide green">
+            <div class="Content__slide-inner">
+              <div>
+                <p class="Content__number">{ 01 }</p>
+                <h2 class="Content__title heading-lg">Bring Ideas to Life</h2>
+              </div>
+              <div>
+                <p class="Content__copy">
+                  Animation isn’t just decoration — it’s how we guide attention,
+                  create clarity, and make interfaces feel alive. In this
+                  session, you’ll get hands-on with techniques that transform
+                  static layouts into stories.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Content__wrapper">
+          <div class="Content__slide white">
+            <div class="Content__slide-inner">
+              <div>
+                <p class="Content__number">{ 02 }</p>
+                <h2 class="Content__title heading-lg">Learn by Doing</h2>
+              </div>
+              <div>
+                <p class="Content__copy">
+                  Instead of watching slides fly past, you’ll code along,
+                  experiment, and break things. Each exercise is designed to
+                  teach you a practical skill you can immediately put into
+                  practice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Content__wrapper">
+          <div class="Content__slide orange">
+            <div class="Content__slide-inner">
+              <div>
+                <p class="Content__number">{ 03 }</p>
+                <h2 class="Content__title heading-lg">Build Your Toolkit</h2>
+              </div>
+              <div>
+                <p class="Content__copy">
+                  By the end of the workshop, you’ll hopefully walk away with
+                  some helpful snippets, animation principles that stand the
+                  test of time, and the confidence to design smoother, smarter
+                  interactions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Content__wrapper">
+          <div class="Content__slide lilac">
+            <div class="Content__slide-inner">
+              <div>
+                <p class="Content__number">{ 04 }</p>
+                <h2 class="Content__title heading-lg">Find the Rhythm</h2>
+              </div>
+              <div>
+                <p class="Content__copy">
+                  Every interaction has a tempo. Some movements are quick and
+                  direct, others linger just long enough to create a sense of
+                  flow. Learning to notice and shape this rhythm helps everything
+                  feel more natural, more connected.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <div id="page5">
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>Socials</h4>
+              <div class="social-links">
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                <a href="#"><i class="ri-twitter-x-line"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <a href="index.html">Home</a>
+              <a href="Pages/snacks.html">Shop</a>
+              <a href="Pages/about.html">About Us</a>
+              <a href="Pages/cart.html">Cart</a>
+            </div>
+            <div class="footer-section">
+              <h4>Flavors</h4>
+              <a href="Pages/snacks.html">Classic Roasted</a>
+              <a href="Pages/snacks.html">Peri-Peri</a>
+              <a href="Pages/snacks.html">Cheese & Herbs</a>
+              <a href="Pages/snacks.html">Pudina Punch</a>
+            </div>
+            <div class="footer-section">
+              <h4>Contact</h4>
+              <p><i class="ri-mail-line"></i> hello@pufnut.com</p>
+              <p><i class="ri-phone-line"></i> +91 98765 43210</p>
+              <p><i class="ri-map-pin-line"></i> Patna, Bihar, India</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 PufNut. All rights reserved. Made with love in Bihar.</p>
+          </div>
+        </footer>
+      </div>
+    
+    </div>
+
+    <!-- ================= Page 4 - Reviews ================= -->
+
+    <!-- locomotive js  -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- gsap cdn  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- scrolltrigger cdn  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Three JS cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- controlKit for debunging -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- Shery JS cdn  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"
+    ></script>
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+    <script src="Js/responsive-menu.js"></script>
+    <script src="Js/user-navbar.js"></script>
+    <script src="Js/user-profile.js"></script>
+  </body>
+</html>
