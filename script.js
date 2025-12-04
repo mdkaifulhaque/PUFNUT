@@ -60,7 +60,7 @@ function loaderAnimation() {
     delay: 2,
     onComplete: () => {
       document.getElementById("loader").style.display = "none";
-      heroAnimation(); // optional if you want to start hero animation next
+      heroAnimation(); 
     },
   });
 }
