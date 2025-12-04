@@ -164,6 +164,11 @@ html {
   background-color: #9a9a3d;
 }
 
+.button .capsule h6 a {
+  text-decoration: none;
+  color: black;
+}
+
 .fullWidth {
   position: absolute;
   height: 100%;

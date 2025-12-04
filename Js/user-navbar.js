@@ -19,9 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>
     `;
     
+    // Helper to get cart key
+    function getCartKey() {
+        const session = JSON.parse(localStorage.getItem('PUFNUT_USER_SESSION'));
+        return session && session.email ? `pufnut_cart_${session.email}` : 'pufnut_cart_guest';
+    }
+
     // Update cart count
-    const cart = JSON.parse(localStorage.getItem('pufnut_cart_v3') || '[]');
-    const count = cart.reduce((sum, item) => sum + item.qty, 0);
+    const cart = JSON.parse(localStorage.getItem(getCartKey()) || '[]');
+    const count = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
     const countEl = document.querySelector('.nav-cart-count');
     if(countEl && count > 0) {
         countEl.textContent = count;

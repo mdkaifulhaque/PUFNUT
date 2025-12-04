@@ -7,9 +7,9 @@ const signupForm = document.getElementById('signup-form');
 if (signupForm) {
     signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = document.getElementById('signup-name').value;
-        const email = document.getElementById('signup-email').value;
-        const password = document.getElementById('signup-password').value;
+        const name = document.getElementById('signup-name').value.trim();
+        const email = document.getElementById('signup-email').value.trim();
+        const password = document.getElementById('signup-password').value.trim();
 
         if (!name || !email || !password) {
             alert('Please fill all fields.');
@@ -51,8 +51,8 @@ const loginForm = document.getElementById('login-form');
 if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
+        const email = document.getElementById('login-email').value.trim();
+        const password = document.getElementById('login-password').value.trim();
 
         const users = JSON.parse(localStorage.getItem(ALL_USERS_KEY) || '[]');
         const user = users.find(u => u.email === email && u.password === password);
@@ -75,7 +75,7 @@ if (loginForm) {
 
 // ---------------- LOGOUT UTILITY (optional)
 function logoutUser() {
-  clearSession();
+  localStorage.removeItem(SESSION_KEY);
   // If on a page inside /Pages/, reload to update navbar; otherwise reload root
   location.reload();
 }

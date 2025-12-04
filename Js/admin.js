@@ -1,6 +1,6 @@
 // admin.js
 
-const STORAGE_KEY = "PUFNUT_PRODUCTS";
+const STORAGE_KEY = "PUFNUT_PRODUCTS_V2";
 let allProducts = [];
 
 // Dialogs

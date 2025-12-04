@@ -1,18 +1,20 @@
 // CART SYSTEM (connected with snacks + recipes)
 
-// same CART_KEY used everywhere
-const CART_KEY = "pufnut_cart_v3";
+function getCartKey() {
+  const session = JSON.parse(localStorage.getItem('PUFNUT_USER_SESSION'));
+  return session && session.email ? `pufnut_cart_${session.email}` : 'pufnut_cart_guest';
+}
 
 function readCart() {
   try {
-    return JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+    return JSON.parse(localStorage.getItem(getCartKey()) || "[]");
   } catch {
     return [];
   }
 }
 
 function saveCart(cart) {
-  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  localStorage.setItem(getCartKey(), JSON.stringify(cart));
   updateCartCount();
 }
 
@@ -21,6 +23,7 @@ function updateCartCount() {
   const total = readCart().reduce((n, i) => n + (i.qty || 1), 0);
   document.querySelectorAll(".nav-cart-count").forEach(el => {
     el.textContent = total;
+    el.style.display = total > 0 ? 'inline-block' : 'none';
   });
 }
 

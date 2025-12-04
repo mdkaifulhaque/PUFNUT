@@ -1,7 +1,7 @@
 // product.js - Initializes products in localStorage if not already present
 
 (function initializeProducts() {
-  const STORAGE_KEY = "PUFNUT_PRODUCTS";
+  const STORAGE_KEY = "PUFNUT_PRODUCTS_V2";
 
   // Check if products are already in localStorage
   const existingData = localStorage.getItem(STORAGE_KEY);
@@ -28,7 +28,7 @@
       name: "Classic Salted Peanuts",
       mrp: 120,
       price: 100,
-      img: "../Asset/p-1.png",
+      img: "../Asset/111.png",
       category: "snacks",
     },
     {
@@ -36,7 +36,7 @@
       name: "Spicy Masala Peanuts",
       mrp: 130,
       price: 110,
-      img: "../Asset/p-2.png",
+      img: "../Asset/222.png",
       category: "snacks",
     },
     {
@@ -44,7 +44,7 @@
       name: "Honey Roasted Peanuts",
       mrp: 150,
       price: 135,
-      img: "../Asset/p-3.png",
+      img: "../Asset/333.png",
       category: "snacks",
     },
     {
@@ -52,7 +52,7 @@
       name: "Garlic & Herb Peanuts",
       mrp: 140,
       price: 125,
-      img: "../Asset/p-4.png",
+      img: "../Asset/4444.png",
       category: "snacks",
     },
     {
@@ -60,7 +60,7 @@
       name: "Sweet Chili Peanuts",
       mrp: 145,
       price: 130,
-      img: "../Asset/p-5.png",
+      img: "../Asset/111.png",
       category: "snacks",
     },
     {
@@ -68,7 +68,7 @@
       name: "Peri-Peri Peanuts",
       mrp: 140,
       price: 120,
-      img: "../Asset/p-6.png",
+      img: "../Asset/222.png",
       category: "snacks",
     },
     {
@@ -76,7 +76,7 @@
       name: "Cheddar Cheese Peanuts",
       mrp: 160,
       price: 145,
-      img: "../Asset/p-7.png",
+      img: "../Asset/333.png",
       category: "snacks",
     },
     {
@@ -84,7 +84,7 @@
       name: "Wasabi Coated Peanuts",
       mrp: 170,
       price: 155,
-      img: "../Asset/p-8.png",
+      img: "../Asset/4444.png",
       category: "snacks",
     },
   ];
@@ -95,7 +95,7 @@
       name: "Peanut Butter (Creamy)",
       mrp: 250,
       price: 220,
-      img: "../Asset/r-1.png",
+      img: "../Asset/111.png",
       category: "recipes",
     },
     {
@@ -103,7 +103,7 @@
       name: "Peanut Butter (Chunky)",
       mrp: 260,
       price: 230,
-      img: "../Asset/r-2.png",
+      img: "../Asset/222.png",
       category: "recipes",
     },
     {
@@ -111,7 +111,7 @@
       name: "Peanut Chutney Powder",
       mrp: 180,
       price: 160,
-      img: "../Asset/r-3.png",
+      img: "../Asset/333.png",
       category: "recipes",
     },
     {
@@ -119,7 +119,7 @@
       name: "Roasted Peanut Oil",
       mrp: 350,
       price: 320,
-      img: "../Asset/r-4.png",
+      img: "../Asset/4444.png",
       category: "recipes",
     },
     {
@@ -127,7 +127,7 @@
       name: "Peanut Flour",
       mrp: 200,
       price: 180,
-      img: "../Asset/r-5.png",
+      img: "../Asset/111.png",
       category: "recipes",
     },
     {
@@ -135,7 +135,7 @@
       name: "Spicy Peanut Sauce",
       mrp: 220,
       price: 200,
-      img: "../Asset/r-6.png",
+      img: "../Asset/222.png",
       category: "recipes",
     },
     {
@@ -143,7 +143,7 @@
       name: "Peanut & Jaggery Bar",
       mrp: 100,
       price: 80,
-      img: "../Asset/r-7.png",
+      img: "../Asset/333.png",
       category: "recipes",
     },
     {
@@ -151,7 +151,7 @@
       name: "Savory Peanut Granola",
       mrp: 300,
       price: 275,
-      img: "../Asset/r-8.png",
+      img: "../Asset/4444.png",
       category: "recipes",
     },
   ];

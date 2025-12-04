@@ -1,6 +1,6 @@
 // recipes.js - background-image loader + add-to-cart + fallback handling
 
-const STORAGE_KEY = "PUFNUT_PRODUCTS";
+const STORAGE_KEY = "PUFNUT_PRODUCTS_V2";
 let recipeProducts = [];
 
 (function loadRecipeProducts(){
@@ -11,11 +11,21 @@ let recipeProducts = [];
 })();
 
 // cart helpers (simple)
-const CART_KEY = "pufnut_cart_v3";
-function readCart(){ try { return JSON.parse(localStorage.getItem(CART_KEY) || "[]"); } catch { return []; } }
-function saveCart(cart){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); updateCartCount(); }
+function getCartKey() {
+  const session = JSON.parse(localStorage.getItem('PUFNUT_USER_SESSION'));
+  return session && session.email ? `pufnut_cart_${session.email}` : 'pufnut_cart_guest';
+}
+
+function readCart(){ try { return JSON.parse(localStorage.getItem(getCartKey()) || "[]"); } catch { return []; } }
+function saveCart(cart){ localStorage.setItem(getCartKey(), JSON.stringify(cart)); updateCartCount(); }
 function addToCart(pid){ const prod = recipeProducts.find(x=>x.id===pid); if(!prod) return {ok:false}; const cart = readCart(); const ex = cart.find(i=>i.id===pid); if(ex) ex.qty=(ex.qty||1)+1; else cart.push({id:prod.id,name:prod.name,price:prod.price,qty:1,img:prod.img}); saveCart(cart); return {ok:true}; }
-function updateCartCount(){ const t = readCart().reduce((s,i)=>s+(i.qty||1),0); document.querySelectorAll('.nav-cart-count').forEach(el=>el.textContent = t); }
+function updateCartCount(){ 
+  const t = readCart().reduce((s,i)=>s+(i.qty||1),0); 
+  document.querySelectorAll('.nav-cart-count').forEach(el=>{
+    el.textContent = t;
+    el.style.display = t > 0 ? 'inline-block' : 'none';
+  }); 
+}
 
 // toast
 (function makeToast(){
