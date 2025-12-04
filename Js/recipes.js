@@ -1,4 +1,4 @@
-// recipes.js - background-image loader + add-to-cart + fallback handling
+// recipes.js 
 
 const STORAGE_KEY = "PUFNUT_PRODUCTS_V2";
 let recipeProducts = [];

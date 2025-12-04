@@ -73,9 +73,8 @@ if (loginForm) {
 }
 
 
-// ---------------- LOGOUT UTILITY (optional)
+// ---------------- LOGOUT
 function logoutUser() {
   localStorage.removeItem(SESSION_KEY);
-  // If on a page inside /Pages/, reload to update navbar; otherwise reload root
   location.reload();
 }

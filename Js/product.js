@@ -1,4 +1,4 @@
-// product.js - Initializes products in localStorage if not already present
+// product.js -
 
 (function initializeProducts() {
   const STORAGE_KEY = "PUFNUT_PRODUCTS_V2";
@@ -8,16 +8,13 @@
   if (existingData) {
     try {
         const parsedData = JSON.parse(existingData);
-        // If data exists and is a non-empty array, we are good.
         if (Array.isArray(parsedData) && parsedData.length > 0) {
             console.log("Products already initialized in localStorage.");
             return;
         }
-        // If array is empty (length 0), we fall through to restore defaults.
         console.log("Product list is empty. Restoring defaults...");
     } catch (e) {
         console.error("Error parsing product data. Resetting to defaults.", e);
-        // If parse error, fall through to restore defaults.
     }
   }
 

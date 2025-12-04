@@ -1,5 +1,4 @@
-// checkout.js - fixed, robust single-page checkout + success animation + cart clear
-
+// checkout.js
 function getCartKey() {
   const session = JSON.parse(localStorage.getItem('PUFNUT_USER_SESSION'));
   return session && session.email ? `pufnut_cart_${session.email}` : 'pufnut_cart_guest';
@@ -23,7 +22,7 @@ function updateCartCount() {
   });
 }
 
-// render checkout summary (keeps page accurate)
+// render checkout summary 
 function renderCheckout() {
   const cart = readCart();
   const container = document.getElementById("checkoutItems");
